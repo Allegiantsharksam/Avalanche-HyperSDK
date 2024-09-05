@@ -149,3 +149,7 @@ killall avalanche-network-runner
 ```
 
 **Note:** Couldn't add the test e2e file because of its size.
+
+
+![Screenshot 2024-09-05 113234](https://github.com/user-attachments/assets/9717a68e-d6f9-440c-af91-b568acf286f7)
+![Screenshot 2024-09-05 113317](https://github.com/user-attachments/assets/1f0a7f00-1b40-45d1-bd03-efeccc7f7ee9)
