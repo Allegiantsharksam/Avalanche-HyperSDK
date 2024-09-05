@@ -14,19 +14,19 @@ This project runs on WSL (Windows Subsystem for Linux) with GO installed inside 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Ms-10182/avax-advance-mod-2.git
+    git clone https://github.com/Allegiantsharksam/Avalanche-HyperSDK.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd avax-advance-mod-2
+    cd Avalanche-HyperSDK
     ```
 
 3. Due to GitHub's file size restrictions, the files are provided in a zip file. Extract the **Avalanche hyperSDK project**.
 
 4. Navigate to the extracted directory:
     ```bash
-    cd './Avalanche hyperSDK project/'
+    cd './Avalanche-HyperSDK/'
     ```
 
 5. Start the machine with 1 subnet:
@@ -59,6 +59,7 @@ This project runs on WSL (Windows Subsystem for Linux) with GO installed inside 
     Building tokenvm in ./build/tHBYNu8ikqo4MWMHehC9iKB9mR5tB3DWzbkYmTfe9buWQ5GZ8
     Building token-cli in ./build/token-cli
     ```
+    
     This command will place the compiled CLI in `./build/token-cli`.
     **Note**: The default address is `token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp`.
 
@@ -80,10 +81,10 @@ Enter the metadata (e.g., GoCoin) and confirm. The output will be:
 ```javascript
 database: .token-cli
 address: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
-chainID: 2vCjHv1ws8YirjkcjsaVotLhCeownJDVBhUJgtBpu6j9ucupgf
+chainID: 2EMjCLBNVFD9aJRRkPcFbxTpre3kNAqjPrK9s8oRBPMq5QfzQT
 metadata (can be changed later): GoCoin
 continue (y/n): y
-✅ txID: 2jce33uBTSa3yKrv7KngEdbwtyN4NBXfhGmx4Xtb6p6nPjtb9w
+✅ txID: 27Ps5AFs7FQmLkbMC433Lu368tT9ZNPVJ3dWdwEubwqBJ3sGZT
 ```
 **Note**: `txID` is the assetID of your new asset.
 
@@ -97,13 +98,15 @@ Enter the assetID, recipient, amount, and confirm. The output will be:
 ```javascript
 database: .token-cli
 address: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
-chainID: 2skpAtPgFs5v5v2nzWaZKVrfRVxPXAVyfMQANy6EpFjG8dMQTo
-assetID: 2fwV7cjRpH7jmK43BWtUc6uTo5Py6wKXBfdQ4CH6BwRMmEmdDe
-metadata: GoCoin supply: 0
-recipient: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
-amount: 100
-continue (y/n): y
-✅ txID: 2hvyq3DSVHMwiWuJXPBy8T9LS2MjiX9Ki8ti625Vofrn7L1Ahi
+chainID: 2EMjCLBNVFD9aJRRkPcFbxTpre3kNAqjPrK9s8oRBPMq5QfzQT
+in assetID (use TKN for native token): TKN
+out assetID (use TKN for native token): 2iiv7Ca55gxwdQHszva1tY4b8A86q8ES3Yqd3vuvCTiePG8Uoy
+✔ out assetID (use TKN for native token): 2iiv7Ca55gxwdQHszva1tY4b8A86q8ES3Yqd3vuvCTiePG8Uoy█
+metadata: cu supply: 100000 warp: false
+balance: 100000 2iiv7Ca55gxwdQHszva1tY4b8A86q8ES3Yqd3vuvCTiePG8Uoy
+out tick: 1000
+✔ continue (y/n): Y█
+✅ txID: ubpeJfXnqkcb7jDHsNvEU4SabezE9XwofF8WwEmHF6hTv1zVS
 ```
 
 ### Step 3: Check Balance
@@ -116,11 +119,18 @@ Enter the assetID of the token. The output will be:
 ```javascript
 database: .token-cli
 address: token1rvzhmceq997zntgvravfagsks6w0ryud3rylh4cdvayry0dl97nsjzf3yp
-chainID: 2skpAtPgFs5v5v2nzWaZKVrfRVxPXAVyfMQANy6EpFjG8dMQTo
-✔ assetID (use TKN for native token): 2fwV7cjRpH7jmK43BWtUc6uTo5Py6wKXBfdQ4CH6BwRMmEmdDe█
-uri: http://127.0.0.1:46526/ext/bc/2skpAtPgFs5v5v2nzWaZKVrfRVxPXAVyfMQANy6EpFjG8dMQTo
-metadata: GoCoin supply: 100 warp: false
-balance: 100 2fwV7cjRpH7jmK43BWtUc6uTo5Py6wKXBfdQ4CH6BwRMmEmdDe
+chainID: 2EMjCLBNVFD9aJRRkPcFbxTpre3kNAqjPrK9s8oRBPMq5QfzQT
+in assetID (use TKN for native token): TKN
+balance: 999.999998638 TKN
+out assetID (use TKN for native token): 2iiv7Ca55gxwdQHszva1tY4b8A86q8ES3Yqd3vuvCTiePG8Uoy
+metadata: cu supply: 100000 warp: false
+available orders: 1
+0) Rate(in/out): 1000000.0000 InTick: 1.000000000 TKN OutTick: 1000 2iiv7Ca55gxwdQHszva1tY4b8A86q8ES3Yqd3vuvCTiePG8Uoy Remaining: 10000 2iiv7Ca55gxwdQHszva1
+select order: 0
+value (must be multiple of in tick): 1
+in: 1.000000000 TKN out: 1000 2iiv7Ca55gxwdQHszva1tY4b8A86q8ES3Yqd3vuvCTiePG8Uoy
+continue (y/n): y
+✅ txID: 27Ps5AFs7FQmLkbMC433Lu368tT9ZNPVJ3dWdwEubwqBJ3sGZT
 ```
 
 ### Additional: Watch the Blockchain
